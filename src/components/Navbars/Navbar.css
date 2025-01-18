@@ -9,6 +9,13 @@
   padding: 12px 12px;
   gap: 16px;
   z-index: 3;
+  background-color: #d6baf3;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container.dark {
+  background-color: #5d4874;
+  color: white;
 }
 
 .navbar-left {
@@ -37,34 +44,19 @@
 
 .navbar-search.btn-ghost {
   background-color: transparent;
-  color: #000;
-  /* border: 2px solid transparent; */
+  color: light-dark(black, white);
 }
 
 .navbar-search.btn-ghost:hover {
   background-color: rgba(0, 0, 0, 0.1) !important;
-  /* color: #000 !important; */
-  /* border-color: #000 !important; */
+
 }
 
 .icon {
   font-size: 1.25rem;
-  /* text-xl */
+  color: light-dark(black, white);
 }
 
-.drawer {
-  position: relative;
-}
-
-.drawer-toggle {
-  display: none;
-}
-
-.drawer-content .drawer-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
 
 .navbar-logo {
   display: flex;
@@ -95,7 +87,7 @@
   font-size: 16px;
   line-height: 1.2;
   font-weight: 600;
-  color: #1a202c;
+  color: light-dark(black, white);
 }
 
 .navbar-right .navbar-button {
@@ -127,7 +119,7 @@
 .btn-ghost:hover {
   background-color: rgba(0, 0, 0, 0.1) !important;
   color: #000 !important;
-  /* border-color: #000 !important; */
+
 }
 
 
@@ -138,8 +130,6 @@
 
 .dropdown-avatar {
   background-color: transparent;
-  /* color: #000; */
-  /* border: 2px solid transparent; */
   width: 3rem;  
   height: 3rem; 
   border-radius: 50%;
@@ -204,7 +194,6 @@
 @media (min-width: 640px) {
   .logo-icon {
     font-size: 2.25rem;
-    /* 4xl */
   }
 
   .navbar-search {
@@ -217,13 +206,10 @@
     text-align: center;
     text-decoration: none;
     color: #000;
-    /* background-color: transparent; */
-    /* border: 2px solid #000; */
     border-radius: 0.375rem;
     background: transparent;
     border: none;
     cursor: pointer;
-    /* transition: background-color 0.3s, color 0.3s; */
   }
 
   .logo-text {
@@ -243,7 +229,6 @@
 
   .logo-icon {
     font-size: 2.25rem;
-    /* 4xl */
   }
 
   .navbar-right {
@@ -269,7 +254,6 @@
 
   .icon {
     font-size: 1.5rem;
-    /* text-2xl */
   }
 
   .logo-icon {
@@ -287,6 +271,5 @@
 
   .icon {
     font-size: 1.875rem;
-    /* text-3xl */
   }
 }

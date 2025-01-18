@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { HiOutlineBell, HiSearch } from 'react-icons/hi';
 import { DiReact } from 'react-icons/di';
 import { RxEnterFullScreen, RxExitFullScreen } from 'react-icons/rx';
@@ -10,6 +10,7 @@ import './Navbar.css';
 const Navbar: React.FC = () => {
   const [isFullScreen, setIsFullScreen] = React.useState(false);
   const element = document.getElementById('root');
+  const theme = useSelector((state: any) => state.theme.theme); // Adjust `any` to your Redux state type.
 
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
@@ -25,13 +26,12 @@ const Navbar: React.FC = () => {
     }
   };
 
-
   return (
-    <div className="navbar-container">
+    <div className={`navbar-container ${theme === 'dark' ? 'dark' : 'light'}`}>
       {/* Navbar left part */}
       <div className="navbar-left">
-        <DiReact className="logo-icon" />
-        <span className="logo-text">React Dashboard</span>
+        <DiReact className={`logo-icon ${theme === 'dark' ? 'dark' : ''}`} />
+        <span className={`logo-text ${theme === 'dark' ? 'dark' : ''}`}>React Dashboard</span>
       </div>
 
       {/* Navbar Right part */}
@@ -44,14 +44,14 @@ const Navbar: React.FC = () => {
           }
           className="navbar-search btn btn-circle btn-ghost"
         >
-          <HiSearch className="icon" />
+          <HiSearch className={`icon ${theme === 'dark' ? 'dark' : ''}`} />
         </button>
 
         <button onClick={toggleFullScreen} className="navbar-search btn btn-circle btn-ghost">
           {isFullScreen ? (
-            <RxExitFullScreen className="icon" />
+            <RxExitFullScreen className={`icon ${theme === 'dark' ? 'dark' : ''}`} />
           ) : (
-            <RxEnterFullScreen className="icon" />
+            <RxEnterFullScreen className={`icon ${theme === 'dark' ? 'dark' : ''}`} />
           )}
         </button>
 
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
           }
           className="navbar-button btn-circle btn-ghost"
         >
-          <HiOutlineBell className="icon" />
+          <HiOutlineBell className={`icon ${theme === 'dark' ? 'dark' : ''}`} />
         </button>
 
         <div className="navbar-button btn-circle btn-ghost">
@@ -87,3 +87,4 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
