@@ -1,0 +1,122 @@
+.home {
+  width: 100%;
+  padding: 10px 15px;
+ 
+}
+
+.grids {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 1rem;
+  margin-top: 50px;
+}
+.box {
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.lineChart, .pieChart, .areaGrp{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  border: 1px solid #e0e0e0;
+  padding: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* .pieChart {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+} */
+
+/* .areaGrp {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+} */
+
+.lineCharts{
+  width : 100%;
+  display : grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  
+}
+
+@media (min-width: 640px) {
+  .grids {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lineChart {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .pieChart {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .areaGrp {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grids {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+  }
+
+  .lineChart {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+  .pieChart {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .lineCharts{
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: span 2;
+  }
+
+  .areaGrp {
+    /* grid-template-columns: repeat(1, 1fr); */
+    grid-column: span 4;
+  }
+}
+
+@media (min-width: 1920px) {
+  .lineChart {
+    grid-auto-rows: repeat(2, auto);
+  }
+
+  .pieChart {
+    grid-auto-rows: repeat(5, auto);
+  }
+
+  .areaGrp {
+    /* grid-auto-rows: repeat(1, auto); */
+    grid-column: span 2;
+  }
+}

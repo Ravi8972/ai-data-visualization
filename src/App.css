@@ -1,0 +1,27 @@
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* overflow: hidden;  */
+  transition: all 0.3s ease-in-out;
+}
+
+.home-container {
+  padding: 10px;
+  margin-top: 80px;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+}
+
+.App-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.App-dark {
+  background-color: #333333;
+  color: #ffffff;
+}
